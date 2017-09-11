@@ -1,0 +1,733 @@
+neo@neo-Vostro-2520:~$ ls
+Desktop    Downloads         Jayesh  npm-debug.log  Public     Videos
+Documents  examples.desktop  Music   Pictures       Templates
+neo@neo-Vostro-2520:~$ ls -l
+total 384
+drwxr-xr-x 3 neo neo   4096 Aug  1 16:12 Desktop
+drwxr-xr-x 2 neo neo   4096 Mar 28  2016 Documents
+drwxr-xr-x 3 neo neo   4096 Aug 14 15:12 Downloads
+-rw-r--r-- 1 neo neo   8980 Mar 28  2016 examples.desktop
+drwxrwxr-x 3 neo neo   4096 Jun  8  2016 Jayesh
+drwxr-xr-x 2 neo neo   4096 Mar 28  2016 Music
+-rw-rw-r-- 1 neo neo 343693 Nov 12  2016 npm-debug.log
+drwxr-xr-x 2 neo neo   4096 Aug 14 15:01 Pictures
+drwxr-xr-x 2 neo neo   4096 Mar 28  2016 Public
+drwxr-xr-x 2 neo neo   4096 Mar 28  2016 Templates
+drwxr-xr-x 2 neo neo   4096 Mar 28  2016 Videos
+neo@neo-Vostro-2520:~$ ls d* 
+ls: cannot access 'd*': No such file or directory
+neo@neo-Vostro-2520:~$ ls npm* .log
+ls: cannot access '.log': No such file or directory
+npm-debug.log
+neo@neo-Vostro-2520:~$ ls npm*.log
+npm-debug.log
+neo@neo-Vostro-2520:~$ ls -a
+.                 .gconf               Pictures
+..                .gnome               .pki
+.bash_history     .gnupg               .profile
+.bash_logout      .http_server.js.swo  Public
+.bashrc           .ICEauthority        .sudo_as_admin_successful
+.cache            Jayesh               Templates
+.config           .lastpass            .thunderbird
+Desktop           .local               Videos
+.dmrc             .mozilla             .viminfo
+Documents         Music                .Xauthority
+Downloads         .npm                 .xsession-errors
+examples.desktop  npm-debug.log        .xsession-errors.old
+neo@neo-Vostro-2520:~$ mkdir tejasvi
+neo@neo-Vostro-2520:~$ cd tejasvi
+neo@neo-Vostro-2520:~/tejasvi$ vi commands
+neo@neo-Vostro-2520:~/tejasvi$ cat commands
+ls: used for listing file and directories
+ls -l: gets more information about the list of files and dir
+ls -a: used to display list of invisible files
+mkdir dirname: used to create a directory
+cd: change the current directory
+cd..: go to the parent directory
+vi filename: to create a file
+shift+ZZ: to come out of the file
+
+neo@neo-Vostro-2520:~/tejasvi$ vi commands
+neo@neo-Vostro-2520:~/tejasvi$ vi hello
+neo@neo-Vostro-2520:~/tejasvi$ wc commands
+ 15 105 609 commands
+neo@neo-Vostro-2520:~/tejasvi$ wc commands hello
+ 15 105 609 commands
+  1   2  13 hello
+ 16 107 622 total
+neo@neo-Vostro-2520:~/tejasvi$ cp commands copyfile
+neo@neo-Vostro-2520:~/tejasvi$ cat copyfile
+ls: used for listing file and directories
+ls -l: gets more information about the list of files and dir
+ls -a: used to display list of invisible files
+mkdir dirname: used to create a directory
+cd: change the current directory
+cd..: go to the parent directory
+vi filename: to create a file
+shift+ZZ: to come out of the file
+cat filename: displays content of the file
+cat -b filename: displays content with line numbers
+wc filename: counts the words in the file
+cp source_file detination_file: copies content of source onto dest fle
+mv oldfile newfile: renames the file
+rm filename: delete file
+rm -i filename: 
+neo@neo-Vostro-2520:~/tejasvi$ mv copyfile commands-copy
+neo@neo-Vostro-2520:~/tejasvi$ cat commands-copy
+ls: used for listing file and directories
+ls -l: gets more information about the list of files and dir
+ls -a: used to display list of invisible files
+mkdir dirname: used to create a directory
+cd: change the current directory
+cd..: go to the parent directory
+vi filename: to create a file
+shift+ZZ: to come out of the file
+cat filename: displays content of the file
+cat -b filename: displays content with line numbers
+wc filename: counts the words in the file
+cp source_file detination_file: copies content of source onto dest fle
+mv oldfile newfile: renames the file
+rm filename: delete file
+rm -i filename: 
+neo@neo-Vostro-2520:~/tejasvi$ cp hello copy-hello
+neo@neo-Vostro-2520:~/tejasvi$ rm hello
+neo@neo-Vostro-2520:~/tejasvi$ rm -h
+rm: invalid option -- 'h'
+Try 'rm --help' for more information.
+neo@neo-Vostro-2520:~/tejasvi$ rm --hrlp
+rm: unrecognized option '--hrlp'
+Try 'rm --help' for more information.
+neo@neo-Vostro-2520:~/tejasvi$ rm -help
+rm: invalid option -- 'h'
+Try 'rm --help' for more information.
+neo@neo-Vostro-2520:~/tejasvi$ rm --help
+Usage: rm [OPTION]... [FILE]...
+Remove (unlink) the FILE(s).
+
+  -f, --force           ignore nonexistent files and arguments, never prompt
+  -i                    prompt before every removal
+  -I                    prompt once before removing more than three files, or
+                          when removing recursively; less intrusive than -i,
+                          while still giving protection against most mistakes
+      --interactive[=WHEN]  prompt according to WHEN: never, once (-I), or
+                          always (-i); without WHEN, prompt always
+      --one-file-system  when removing a hierarchy recursively, skip any
+                          directory that is on a file system different from
+                          that of the corresponding command line argument
+      --no-preserve-root  do not treat '/' specially
+      --preserve-root   do not remove '/' (default)
+  -r, -R, --recursive   remove directories and their contents recursively
+  -d, --dir             remove empty directories
+  -v, --verbose         explain what is being done
+      --help     display this help and exit
+      --version  output version information and exit
+
+By default, rm does not remove directories.  Use the --recursive (-r or -R)
+option to remove each listed directory, too, along with all of its contents.
+
+To remove a file whose name starts with a '-', for example '-foo',
+use one of these commands:
+  rm -- -foo
+
+  rm ./-foo
+
+Note that if you use rm to remove a file, it might be possible to recover
+some of its contents, given sufficient expertise and/or time.  For greater
+assurance that the contents are truly unrecoverable, consider using shred.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/rm>
+or available locally via: info '(coreutils) rm invocation'
+neo@neo-Vostro-2520:~/tejasvi$ cd..
+cd..: command not found
+neo@neo-Vostro-2520:~/tejasvi$ cd -
+/home/neo
+neo@neo-Vostro-2520:~$ cd tejasvi
+neo@neo-Vostro-2520:~/tejasvi$ 
+neo@neo-Vostro-2520:~/tejasvi$ cd ~
+neo@neo-Vostro-2520:~$ cd tejasvi
+neo@neo-Vostro-2520:~/tejasvi$ mkdir parentdir/childdir
+mkdir: cannot create directory ‘parentdir/childdir’: No such file or directory
+neo@neo-Vostro-2520:~/tejasvi$ mkdir parentdir
+neo@neo-Vostro-2520:~/tejasvi$ mkdir parentdir/childdir
+neo@neo-Vostro-2520:~/tejasvi$ ls 
+commands  commands-copy  copy-hello  day1  parentdir
+neo@neo-Vostro-2520:~/tejasvi$ ls parentdir
+childdir
+neo@neo-Vostro-2520:~/tejasvi$ rm -i copy-hello
+rm: remove regular file 'copy-hello'? yes
+neo@neo-Vostro-2520:~/tejasvi$ ls parentdir
+childdir
+neo@neo-Vostro-2520:~/tejasvi$ ls 
+commands  commands-copy  day1  parentdir
+neo@neo-Vostro-2520:~/tejasvi$ mv day1 test1
+neo@neo-Vostro-2520:~/tejasvi$ mkdir day1
+neo@neo-Vostro-2520:~/tejasvi$ ls 
+commands  commands-copy  day1  parentdir  test1
+neo@neo-Vostro-2520:~/tejasvi$ mv --help
+Usage: mv [OPTION]... [-T] SOURCE DEST
+  or:  mv [OPTION]... SOURCE... DIRECTORY
+  or:  mv [OPTION]... -t DIRECTORY SOURCE...
+Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
+
+Mandatory arguments to long options are mandatory for short options too.
+      --backup[=CONTROL]       make a backup of each existing destination file
+  -b                           like --backup but does not accept an argument
+  -f, --force                  do not prompt before overwriting
+  -i, --interactive            prompt before overwrite
+  -n, --no-clobber             do not overwrite an existing file
+If you specify more than one of -i, -f, -n, only the final one takes effect.
+      --strip-trailing-slashes  remove any trailing slashes from each SOURCE
+                                 argument
+  -S, --suffix=SUFFIX          override the usual backup suffix
+  -t, --target-directory=DIRECTORY  move all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory    treat DEST as a normal file
+  -u, --update                 move only when the SOURCE file is newer
+                                 than the destination file or when the
+                                 destination file is missing
+  -v, --verbose                explain what is being done
+  -Z, --context                set SELinux security context of destination
+                                 file to default type
+      --help     display this help and exit
+      --version  output version information and exit
+
+The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/mv>
+or available locally via: info '(coreutils) mv invocation'
+neo@neo-Vostro-2520:~/tejasvi$ rmdir parentdir/chliddir
+rmdir: failed to remove 'parentdir/chliddir': No such file or directory
+neo@neo-Vostro-2520:~/tejasvi$ rmdir parentdir
+rmdir: failed to remove 'parentdir': Directory not empty
+neo@neo-Vostro-2520:~/tejasvi$ rmdir parentdir/childdir
+neo@neo-Vostro-2520:~/tejasvi$ ls parentdir
+neo@neo-Vostro-2520:~/tejasvi$ ls -l
+total 24
+-rw-rw-r-- 1 neo neo  609 Sep 11 12:38 commands
+-rw-rw-r-- 1 neo neo  609 Sep 11 12:41 commands-copy
+drwxrwxr-x 2 neo neo 4096 Sep 11 13:55 day1
+drwxrwxr-x 2 neo neo 4096 Sep 11 14:16 parentdir
+-rw-rw-r-- 1 neo neo 4817 Sep 11 13:58 test1
+neo@neo-Vostro-2520:~/tejasvi$ chmod o+wx commands-copy
+neo@neo-Vostro-2520:~/tejasvi$ ls -l
+total 24
+-rw-rw-r-- 1 neo neo  609 Sep 11 12:38 commands
+-rw-rw-rwx 1 neo neo  609 Sep 11 12:41 commands-copy
+drwxrwxr-x 2 neo neo 4096 Sep 11 13:55 day1
+drwxrwxr-x 2 neo neo 4096 Sep 11 14:16 parentdir
+-rw-rw-r-- 1 neo neo 4817 Sep 11 13:58 test1
+neo@neo-Vostro-2520:~/tejasvi$ chmod u-x commands-copy
+neo@neo-Vostro-2520:~/tejasvi$ ls -l
+total 24
+-rw-rw-r-- 1 neo neo  609 Sep 11 12:38 commands
+-rw-rw-rwx 1 neo neo  609 Sep 11 12:41 commands-copy
+drwxrwxr-x 2 neo neo 4096 Sep 11 13:55 day1
+drwxrwxr-x 2 neo neo 4096 Sep 11 14:16 parentdir
+-rw-rw-r-- 1 neo neo 4817 Sep 11 13:58 test1
+neo@neo-Vostro-2520:~/tejasvi$ chmod 743 commands-copy
+neo@neo-Vostro-2520:~/tejasvi$ ls -l
+total 24
+-rw-rw-r-- 1 neo neo  609 Sep 11 12:38 commands
+-rwxr---wx 1 neo neo  609 Sep 11 12:41 commands-copy
+drwxrwxr-x 2 neo neo 4096 Sep 11 13:55 day1
+drwxrwxr-x 2 neo neo 4096 Sep 11 14:16 parentdir
+-rw-rw-r-- 1 neo neo 4817 Sep 11 13:58 test1
+neo@neo-Vostro-2520:~/tejasvi$ ls -l test1
+-rw-rw-r-- 1 neo neo 4817 Sep 11 13:58 test1
+neo@neo-Vostro-2520:~/tejasvi$ chown neo test1
+neo@neo-Vostro-2520:~/tejasvi$ chown test1
+chown: missing operand after ‘test1’
+Try 'chown --help' for more information.
+neo@neo-Vostro-2520:~/tejasvi$ cal
+   September 2017     
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+                      
+neo@neo-Vostro-2520:~/tejasvi$ whoami
+neo
+neo@neo-Vostro-2520:~/tejasvi$ 
+neo@neo-Vostro-2520:~/tejasvi$ users
+neo
+neo@neo-Vostro-2520:~/tejasvi$ who
+neo      tty7         2017-09-11 16:43 (:0)
+neo@neo-Vostro-2520:~/tejasvi$ w
+ 14:49:31 up  3:36,  1 user,  load average: 0.17, 0.30, 0.28
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+neo      tty7     :0               16:43     ?     2:45   0.22s /sbin/upstar
+neo@neo-Vostro-2520:~/tejasvi$ cal 2020
+                            2020
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+          1  2  3  4                     1   1  2  3  4  5  6  7  
+ 5  6  7  8  9 10 11   2  3  4  5  6  7  8   8  9 10 11 12 13 14  
+12 13 14 15 16 17 18   9 10 11 12 13 14 15  15 16 17 18 19 20 21  
+19 20 21 22 23 24 25  16 17 18 19 20 21 22  22 23 24 25 26 27 28  
+26 27 28 29 30 31     23 24 25 26 27 28 29  29 30 31              
+                                                                  
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+          1  2  3  4                  1  2      1  2  3  4  5  6  
+ 5  6  7  8  9 10 11   3  4  5  6  7  8  9   7  8  9 10 11 12 13  
+12 13 14 15 16 17 18  10 11 12 13 14 15 16  14 15 16 17 18 19 20  
+19 20 21 22 23 24 25  17 18 19 20 21 22 23  21 22 23 24 25 26 27  
+26 27 28 29 30        24 25 26 27 28 29 30  28 29 30              
+                      31                                          
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+          1  2  3  4                     1         1  2  3  4  5  
+ 5  6  7  8  9 10 11   2  3  4  5  6  7  8   6  7  8  9 10 11 12  
+12 13 14 15 16 17 18   9 10 11 12 13 14 15  13 14 15 16 17 18 19  
+19 20 21 22 23 24 25  16 17 18 19 20 21 22  20 21 22 23 24 25 26  
+26 27 28 29 30 31     23 24 25 26 27 28 29  27 28 29 30           
+                      30 31                                       
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+             1  2  3   1  2  3  4  5  6  7         1  2  3  4  5  
+ 4  5  6  7  8  9 10   8  9 10 11 12 13 14   6  7  8  9 10 11 12  
+11 12 13 14 15 16 17  15 16 17 18 19 20 21  13 14 15 16 17 18 19  
+18 19 20 21 22 23 24  22 23 24 25 26 27 28  20 21 22 23 24 25 26  
+25 26 27 28 29 30 31  29 30                 27 28 29 30 31        
+                                                                  
+neo@neo-Vostro-2520:~/tejasvi$ chgrp neo test1
+neo@neo-Vostro-2520:~/tejasvi$ ls 
+commands  commands-copy  day1  parentdir  test1
+neo@neo-Vostro-2520:~/tejasvi$ temp = "Unix programming"
+temp: command not found
+neo@neo-Vostro-2520:~/tejasvi$ echo $temp
+
+neo@neo-Vostro-2520:~/tejasvi$ $temp = "Unix programming"
+=: command not found
+neo@neo-Vostro-2520:~/tejasvi$ $temp="Unix programming"
+=Unix programming: command not found
+neo@neo-Vostro-2520:~/tejasvi$ \t
+t: command not found
+neo@neo-Vostro-2520:~/tejasvi$ echo "this is a test"
+this is a test
+neo@neo-Vostro-2520:~/tejasvi$ echo "this is a >test"
+this is a >test
+neo@neo-Vostro-2520:~/tejasvi$ echo "this is a "
+this is a 
+neo@neo-Vostro-2520:~/tejasvi$ echo "this is a 
+> test"
+this is a 
+test
+neo@neo-Vostro-2520:~/tejasvi$ temp="temp"
+neo@neo-Vostro-2520:~/tejasvi$ echo $temp
+temp
+neo@neo-Vostro-2520:~/tejasvi$ echo "\t"
+\t
+neo@neo-Vostro-2520:~/tejasvi$ PS1="[\t]\$"
+[15:12:18]$
+[15:12:25]$
+[15:12:26]$
+[15:12:27]$
+[15:12:35]$echo $temp
+temp
+[15:13:26]$echo "this is a "
+this is a 
+[15:13:34]$cd day1
+[15:15:45]$mv Untitled Document task1
+mv: target 'task1' is not a directory
+[15:16:14]$mv UntitledDocument task1
+mv: cannot stat 'UntitledDocument': No such file or directory
+[15:16:36]$mv Untitled Document task1
+mv: target 'task1' is not a directory
+[15:16:49]$PS1 = "[\u@\h\w]\$"
+PS1: command not found
+[15:19:38]$PS1 = "[\u@\h \w]\$"
+PS1: command not found
+[15:19:49]$PS1="[\u@\h \w]\$"
+[neo@neo-Vostro-2520 ~/tejasvi/day1]$PS1="\u@\h \w\$"
+neo@neo-Vostro-2520 ~/tejasvi/day1$PS1="\u:@\h \w\$"
+neo:@neo-Vostro-2520 ~/tejasvi/day1$PS1="\u@\h: \w\$"
+neo@neo-Vostro-2520: ~/tejasvi/day1$PS1="\u@\h:\w\$"
+neo@neo-Vostro-2520:~/tejasvi/day1$cd ~
+neo@neo-Vostro-2520:~$cd tejasvi
+neo@neo-Vostro-2520:~/tejasvi$echo $HOME
+/home/neo
+neo@neo-Vostro-2520:~/tejasvi$ecjo $DISPLYA
+No command 'ecjo' found, did you mean:
+ Command 'echo' from package 'coreutils' (main)
+ Command 'ecj' from package 'ecj' (main)
+ecjo: command not found
+neo@neo-Vostro-2520:~/tejasvi$ecjo $DISPLAY
+No command 'ecjo' found, did you mean:
+ Command 'ecj' from package 'ecj' (main)
+ Command 'echo' from package 'coreutils' (main)
+ecjo: command not found
+neo@neo-Vostro-2520:~/tejasvi$echo $DISPLAY
+:0
+neo@neo-Vostro-2520:~/tejasvi$echo $TERM
+xterm-256color
+neo@neo-Vostro-2520:~/tejasvi$echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+neo@neo-Vostro-2520:~/tejasvi$echo $LANG
+en_IN
+neo@neo-Vostro-2520:~/tejasvi$echo $TZ
+
+neo@neo-Vostro-2520:~/tejasvi$echo UID
+UID
+neo@neo-Vostro-2520:~/tejasvi$cat commands
+ls: used for listing file and directories
+ls -l: gets more information about the list of files and dir
+ls -a: used to display list of invisible files
+mkdir dirname: used to create a directory
+cd: change the current directory
+cd..: go to the parent directory
+vi filename: to create a file
+shift+ZZ: to come out of the file
+cat filename: displays content of the file
+cat -b filename: displays content with line numbers
+wc filename: counts the words in the file
+cp source_file detination_file: copies content of source onto dest fle
+mv oldfile newfile: renames the file
+rm filename: delete file
+rm -i filename: 
+neo@neo-Vostro-2520:~/tejasvi$pr -2 -h "Commands" commands
+
+
+2017-09-11 12:38                     Commands                     Page 1
+
+
+ls: used for listing file and direc cat filename: displays content of t
+ls -l: gets more information about  cat -b filename: displays content w
+ls -a: used to display list of invi wc filename: counts the words in th
+mkdir dirname: used to create a dir cp source_file detination_file: cop
+cd: change the current directory    mv oldfile newfile: renames the fil
+cd..: go to the parent directory    rm filename: delete file
+vi filename: to create a file	    rm -i filename:
+shift+ZZ: to come out of the file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+neo@neo-Vostro-2520:~/tejasvi$ip
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { link | address | addrlabel | route | rule | neighbor | ntable |
+                   tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
+                   netns | l2tp | fou | tcp_metrics | token | netconf }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec |
+                    -f[amily] { inet | inet6 | ipx | dnet | mpls | bridge | link } |
+                    -4 | -6 | -I | -D | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -a[ll] | -c[olor]}
+neo@neo-Vostro-2520:~/tejasvi$ip -v
+Option "-v" is unknown, try "ip -help".
+neo@neo-Vostro-2520:~/tejasvi$mail
+The program 'mail' is currently not installed. You can install it by typing:
+sudo apt install mailutils
+neo@neo-Vostro-2520:~/tejasvi$ls -l grep "Sep"
+ls: cannot access 'grep': No such file or directory
+ls: cannot access 'Sep': No such file or directory
+neo@neo-Vostro-2520:~/tejasvi$ls -l | grep "Sep"
+-rw-rw-r-- 1 neo neo  609 Sep 11 12:38 commands
+-rwxr---wx 1 neo neo  609 Sep 11 12:41 commands-copy
+drwxrwxr-x 2 neo neo 4096 Sep 11 15:17 day1
+drwxrwxr-x 2 neo neo 4096 Sep 11 14:16 parentdir
+-rw-rw-r-- 1 neo neo 4817 Sep 11 13:58 test1
+neo@neo-Vostro-2520:~/tejasvi$vi randomnumbers
+neo@neo-Vostro-2520:~/tejasvi$visort --help
+No command 'visort' found, did you mean:
+ Command 'isort' from package 'isort' (universe)
+visort: command not found
+neo@neo-Vostro-2520:~/tejasvi$sort randomnumbers
+
+0
+1
+100
+12
+12
+127
+128
+15
+17
+2
+2
+222
+23
+23
+26
+3
+3
+36
+373
+6
+7
+82
+neo@neo-Vostro-2520:~/tejasvi$cat randomnumbers
+12
+6
+15
+17
+3
+100
+36
+26
+82
+128
+127
+23
+0
+23
+3
+7
+2
+1
+373
+222
+12
+2
+
+neo@neo-Vostro-2520:~/tejasvi$sort -n  randomnumbers
+
+0
+1
+2
+2
+3
+3
+6
+7
+12
+12
+15
+17
+23
+23
+26
+36
+82
+100
+127
+128
+222
+373
+neo@neo-Vostro-2520:~/tejasvi$sort -n-r  randomnumbers
+sort: invalid option -- '-'
+Try 'sort --help' for more information.
+neo@neo-Vostro-2520:~/tejasvi$sort -n -r randomnumbers
+373
+222
+128
+127
+100
+82
+36
+26
+23
+23
+17
+15
+12
+12
+7
+6
+3
+3
+2
+2
+1
+0
+
+neo@neo-Vostro-2520:~/tejasvi$sort -r randomnumbers
+82
+7
+6
+373
+36
+3
+3
+26
+23
+23
+222
+2
+2
+17
+15
+128
+127
+12
+12
+100
+1
+0
+
+neo@neo-Vostro-2520:~/tejasvi$vi food
+neo@neo-Vostro-2520:~/tejasvi$sort food
+
+apples
+banana
+blueberry
+guava
+kiwi
+orange
+strawberry
+sweetlime
+watermelon
+neo@neo-Vostro-2520:~/tejasvi$vi food
+neo@neo-Vostro-2520:~/tejasvi$sort food
+apples
+Apples
+banana
+Banana
+Blueberry
+cranberries
+dragon fruit
+grapes
+guava
+kiwi
+orange
+Strawberry
+sweetlime
+Watermelon
+neo@neo-Vostro-2520:~/tejasvi$vi food
+neo@neo-Vostro-2520:~/tejasvi$sort food
+apples
+Apples
+banana
+Banana
+Blueberry
+cranberries
+dragon fruit
+grapes
+guava
+kiwi
+orange
+Strawberry
+sweetlime
+Watermelon
+neo@neo-Vostro-2520:~/tejasvi$sort -f food 
+apples
+Apples
+banana
+Banana
+Blueberry
+cranberries
+dragon fruit
+grapes
+guava
+kiwi
+orange
+Strawberry
+sweetlime
+Watermelon
+neo@neo-Vostro-2520:~/tejasvi$cat grep "ap" food
+cat: grep: No such file or directory
+cat: ap: No such file or directory
+orange
+Apples
+banana
+Watermelon
+kiwi
+Blueberry
+sweetlime
+Strawberry
+guava
+dragon fruit
+cranberries
+grapes
+apples
+Banana
+neo@neo-Vostro-2520:~/tejasvi$cat |grep "ap" food
+grapes
+apples
+^[[A^[[B^[[B^[[B^[[B^[[B^[[B^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^               
+neo@neo-Vostro-2520:~/tejasvi$cat food
+orange
+Apples
+banana
+Watermelon
+kiwi
+Blueberry
+sweetlime
+Strawberry
+guava
+dragon fruit
+cranberries
+grapes
+apples
+Banana
+neo@neo-Vostro-2520:~/tejasvi$$ls -l | grep "Sep" | sort +4n
+sort: cannot read: +4n: No such file or directory
+-l: command not found
+neo@neo-Vostro-2520:~/tejasvi$$ls -l | grep "Sep" | sort 
+-l: command not found
+neo@neo-Vostro-2520:~/tejasvi$ls -l | grep "Sep" | sort 
+drwxrwxr-x 2 neo neo 4096 Sep 11 14:16 parentdir
+drwxrwxr-x 2 neo neo 4096 Sep 11 15:17 day1
+-rw-rw-r-- 1 neo neo  120 Sep 11 16:11 food
+-rw-rw-r-- 1 neo neo 4817 Sep 11 13:58 test1
+-rw-rw-r-- 1 neo neo  609 Sep 11 12:38 commands
+-rw-rw-r-- 1 neo neo   64 Sep 11 16:00 randomnumbers
+-rwxr---wx 1 neo neo  609 Sep 11 12:41 commands-copy
+neo@neo-Vostro-2520:~/tejasvi$^C
+neo@neo-Vostro-2520:~/tejasvi$
+
