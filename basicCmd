@@ -1,0 +1,338 @@
+tejasvi@tejasvi-X540LA:~$ pwd
+/home/tejasvi
+tejasvi@tejasvi-X540LA:~$ hostname
+tejasvi-X540LA
+tejasvi@tejasvi-X540LA:~$ whoami
+tejasvi
+tejasvi@tejasvi-X540LA:~$ who
+tejasvi  tty7         2017-09-12 22:18 (:0)
+tejasvi@tejasvi-X540LA:~$ w
+ 11:55:07 up 37 min,  1 user,  load average: 0.30, 0.24, 0.21
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+tejasvi  tty7     :0               22:18     ?    27.40s  0.18s /sbin/upstart -
+tejasvi@tejasvi-X540LA:~$ users
+tejasvi
+tejasvi@tejasvi-X540LA:~$ history
+    1  mkdir tejasvi
+    2  ls
+    3  cd tejasvi
+    4  mkdir day1
+    5  mkdir day2
+    6  pushd day1
+    7  popd -n
+    8  xargs --help
+    9  users
+   10  whoami
+   11  who
+   12  w
+   13  history
+   14  whatis sudo
+   15  sudo --help
+   16  vi basicCmd
+   17  clear
+   18  pwd
+   19  hostname
+   20  mkdir temp
+   21  cd temp
+   22  cd ..
+   23  cd 
+   24  cd tejasvi
+   25  ls
+   26  users
+   27  whoami
+   28  who
+   29  w
+   30  history
+   31  apropos concat
+   32  find day1
+   33  pwd
+   34  hostname
+   35  whoami
+   36  who
+   37  w
+   38  users
+   39  history
+tejasvi@tejasvi-X540LA:~$ ls
+Desktop    Downloads         Music     Public   Templates
+Documents  examples.desktop  Pictures  tejasvi  Videos
+tejasvi@tejasvi-X540LA:~$ cd tejasvi
+tejasvi@tejasvi-X540LA:~/tejasvi$ ls
+day1  day2
+tejasvi@tejasvi-X540LA:~/tejasvi$ cd temp
+bash: cd: temp: No such file or directory
+tejasvi@tejasvi-X540LA:~/tejasvi$ mkdir temp
+tejasvi@tejasvi-X540LA:~/tejasvi$ ls
+day1  day2  temp
+tejasvi@tejasvi-X540LA:~/tejasvi$ rmdir temp
+tejasvi@tejasvi-X540LA:~/tejasvi$ ls
+day1  day2
+tejasvi@tejasvi-X540LA:~/tejasvi$ pushd day1
+~/tejasvi/day1 ~/tejasvi
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ popd -n
+~/tejasvi/day1
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ popd -n
+bash: popd: directory stack empty
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ apropos concat
+cat (1)              - concatenate files and print on the standard output
+gvfs-cat (1)         - Concatenate files
+pnmcat (1)           - concatenate portable anymaps
+STAILQ_CONCAT (3)    - implementations of singly-linked lists, singly-linked ...
+strcat (3)           - concatenate two strings
+strncat (3)          - concatenate two strings
+tac (1)              - concatenate and print files in reverse
+TAILQ_CONCAT (3)     - implementations of singly-linked lists, singly-linked ...
+tarcat (1)           - concatenates the pieces of a GNU tar multi-volume archive
+wcscat (3)           - concatenate two wide-character strings
+wcsncat (3)          - concatenate two wide-character strings
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ cd ..
+tejasvi@tejasvi-X540LA:~/tejasvi$ find day1
+day1
+day1/vegetables
+day1/.numbers.swp
+day1/temp
+day1/basicCmd
+day1/fruits
+tejasvi@tejasvi-X540LA:~/tejasvi$ cd day1
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ vi numbers
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls
+basicCmd  fruits  numbers  temp  vegetables
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ cat fruits
+orange
+banana
+apple
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ less vegetables
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ cp fruits fruitcopy
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls
+basicCmd  fruitcopy  fruits  numbers  temp  vegetables
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ cat fruitcopy
+orange
+banana
+apple
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ rm fruitcopy
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls
+basicCmd  fruits  numbers  temp  vegetables
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ sort fruits
+apple
+banana
+orange
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ sort numbers
+1
+1
+1
+1
+10
+162
+1624
+182
+218239
+23
+23
+26
+282
+3
+32
+3532
+363
+40
+8
+87
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ sort -n numbers
+1
+1
+1
+1
+3
+8
+10
+23
+23
+26
+32
+40
+87
+162
+182
+282
+363
+1624
+3532
+218239
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ sort -n -r numbers
+218239
+3532
+1624
+363
+282
+182
+162
+87
+40
+32
+26
+23
+23
+10
+8
+3
+1
+1
+1
+1
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ sort -r fruits
+orange
+banana
+apple
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ man mv
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls
+basicCmd  food  fruits  numbers  temp  vegetables
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ cat fruits vegetables >  food
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ cat food
+orange
+banana
+apple
+potato
+onion
+cabagge
+brinjal
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ mv food healthyfood
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls
+basicCmd  fruits  healthyfood  numbers  temp  vegetables
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ wc numbers
+20 20 66 numbers
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ gzip healthyfood
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ zcat healthyfood
+orange
+banana
+apple
+potato
+onion
+cabagge
+brinjal
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ val=`expr 2 + 7`
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ echo "Value of expression : $val"
+Value of expression : 9
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ head numbers
+3
+8
+1
+282
+162
+40
+1624
+363
+218239
+1
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ tail numbers
+1
+1
+3532
+32
+23
+87
+26
+10
+182
+23
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ head -3 fruits
+orange
+banana
+apple
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ tail -2 fruits
+grapes
+tomato
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ diff fruits copyfruits
+5,7c5
+< Mango
+< grapes
+< tomato
+---
+> Grapefruit
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ grep ap fruits
+apple
+grapes
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ grep -i ap fruits
+apple
+Apple
+grapes
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls -l | grep "Sep"
+-rw-rw-r-- 1 tejasvi tejasvi 5305 Sep 12 12:45 basicCmd
+-rw-rw-r-- 1 tejasvi tejasvi   37 Sep 12 12:43 copyfruits
+-rw-rw-r-- 1 tejasvi tejasvi   46 Sep 12 12:32 fruits
+-rw-rw-r-- 1 tejasvi tejasvi   78 Sep 12 12:21 healthyfood.gz
+-rw-rw-r-- 1 tejasvi tejasvi   66 Sep 12 12:13 numbers
+drwxrwxr-x 2 tejasvi tejasvi 4096 Sep 12 11:52 temp
+-rw-rw-r-- 1 tejasvi tejasvi   37 Sep 12 12:32 vegetables
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls -l
+total 32
+-rw-rw-r-- 1 tejasvi tejasvi 5305 Sep 12 12:45 basicCmd
+-rwx-wxr-- 1 tejasvi tejasvi   37 Sep 12 12:43 copyfruits
+-rw-rw-r-- 1 tejasvi tejasvi   46 Sep 12 12:32 fruits
+-rw-rw-r-- 1 tejasvi tejasvi   78 Sep 12 12:21 healthyfood.gz
+-rw-rw-r-- 1 tejasvi tejasvi   66 Sep 12 12:13 numbers
+drwxrwxr-x 2 tejasvi tejasvi 4096 Sep 12 11:52 temp
+-rw-rw-r-- 1 tejasvi tejasvi   37 Sep 12 12:32 vegetables
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ chown tejasvi copyfruits
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls -l copyfruits
+-rwx-wxr-- 1 tejasvi tejasvi 37 Sep 12 12:43 copyfruits
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ chgrp tejasvi copyfruits
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls -l copyfruits
+-rwx-wxr-- 1 tejasvi tejasvi 37 Sep 12 12:43 copyfruits
+tejasvi@tejasvi-X540LA:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+udev             1952144       0   1952144   0% /dev
+tmpfs             394284    6412    387872   2% /run
+/dev/sda7      189405956 3821888 175939680   3% /
+tmpfs            1971420     552   1970868   1% /dev/shm
+tmpfs               5120       4      5116   1% /run/lock
+tmpfs            1971420       0   1971420   0% /sys/fs/cgroup
+/dev/sda2          98304   29033     69271  30% /boot/efi
+tmpfs             394284     104    394180   1% /run/user/1000
+tejasvi@tejasvi-X540LA:~$ du -s
+45724	.
+tejasvi@tejasvi-X540LA:~$ ps
+  PID TTY          TIME CMD
+ 5721 pts/4    00:00:00 bash
+ 5748 pts/4    00:00:00 ps
+tejasvi@tejasvi-X540LA:~$ ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+tejasvi   5721  5714  0 12:51 pts/4    00:00:00 bash
+tejasvi   5751  5721  0 12:55 pts/4    00:00:00 ps -f
+tejasvi@tejasvi-X540LA:~$ cal
+   September 2017     
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+tejasvi@tejasvi-X540LA:~$ a=10
+tejasvi@tejasvi-X540LA:~$ b=30
+tejasvi@tejasvi-X540LA:~$ sum=`expr $a + $b`
+tejasvi@tejasvi-X540LA:~$ echo $sum
+40
+tejasvi@tejasvi-X540LA:~$ sub=`expr $a - $b`
+tejasvi@tejasvi-X540LA:~$ echo $sub
+-20
+tejasvi@tejasvi-X540LA:~$ prod=`expr $a \* $b`
+tejasvi@tejasvi-X540LA:~$ echo $prod
+300
+tejasvi@tejasvi-X540LA:~$ div=`expr $b / $a`
+tejasvi@tejasvi-X540LA:~$ echo $div
+3
+ejasvi@tejasvi-X540LA:~/tejasvi$ touch emptyfile
+tejasvi@tejasvi-X540LA:~/tejasvi$ mv emptyfile day1
+tejasvi@tejasvi-X540LA:~/tejasvi$ cd day1
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls
+basicCmd    emptyfile  healthyfood.gz  temp
+copyfruits  fruits     numbers         vegetables
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ rm emptyfile temp
+rm: cannot remove 'temp': Is a directory
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ rmdir temp
+tejasvi@tejasvi-X540LA:~/tejasvi/day1$ ls
+basicCmd  copyfruits  fruits  healthyfood.gz  numbers  vegetables
+
+
+
+
+
+
